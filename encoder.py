@@ -26,4 +26,16 @@ class decode(encode):
     
     
     
-arg_parse
+def parse_args():
+    """Parse and validate command line arguments.
+    
+    This function expects these required arguments.
+        file: a file containing the words you want encrypted.
+        word: a word you want to encrypt
+        
+    Args:
+        arglist (list of str): list of command line arguments
+        
+    Returns:
+        namespace: the parsed argument
+    """
