@@ -13,7 +13,7 @@ class encode:
     choose to encode'''   
     
     file_encoding():
-    
+    ''' This function will take the file and encode it'''
     e_words = []
 class decode(encode):
     
