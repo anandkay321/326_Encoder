@@ -14,13 +14,19 @@ class encode:
     
     file_encoding():
     ''' This function will take the user's chosen words and encode it '''
+    encode():
+    ''' This function will take the user's chosen words and encode it using our algorithm
+    based on an ASCII table, where the algorithm converts each character into its ascii 
+    value, increments it by the chosen start value + its index in the string'''
+    
     e_words = []
 class decode(encode):
     
     __init__():
         
     decode():
-    
+    '''This function overwrites and is based on the encode function, where this
+    will take a presumably encoded string and reverse the encoding'''
     
     
     
