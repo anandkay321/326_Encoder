@@ -3,8 +3,7 @@ import math
 
 class encode:
     __init__():
-    '''This function's purpose is to allow the atributes to begin running within 
-    the class'''   
+    ''' '''   
     word_checker():
     '''This funtion's purpose is to check if the user inputed word can be encoded
     if it reads the string and it contains anything other than letter it will return
@@ -24,8 +23,7 @@ class encode:
 class decode(encode):
     
     __init__():
-        '''This function's purpose is to allow the atributes to begin running within 
-        the class'''
+        
     decode():
     '''This function overwrites and is based on the encode function, where this
     will take a presumably encoded string and reverse the encoding'''
