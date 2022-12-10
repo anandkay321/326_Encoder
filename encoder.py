@@ -24,10 +24,12 @@ class decode(encode):
     
     __init__():
         
-    decode():
-    '''This function overwrites and is based on the encode function, where this
-    will take a presumably encoded string and reverse the encoding'''
+    
+    
     def decode(text, shift, alphabets):
+        '''This function overwrites the encode function, where this
+    will take a presumably encoded string and reverse the encoding
+    by negating the shift given in the super function and iterating through in a similar manner'''
         return super().__cryp__(text, shift*-1, alphabets)
     
     
