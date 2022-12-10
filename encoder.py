@@ -20,20 +20,27 @@ class encode:
     value, increments it by the chosen start value + its index in the string'''
     
     e_words = []
-class decode(encode):
+#Joe
+    def __repr__(self):
+        return(f"encod('{self.plain_text}')")
     
-    __init__():
-        
-    
-    
-    def decode(text, shift, alphabets):
-        '''This function overwrites the encode function, where this
-    will take a presumably encoded string and reverse the encoding
-    by negating the shift given in the super function and iterating through in a similar manner'''
+class decode(encod):
+    def __decryp__(text, shift*-1, alphabets):
         return super().__cryp__(text, shift*-1, alphabets)
     
-    
-    
+choose = 0
+while choose != 1 and choose != 0:
+    choose = input("Encode(1) or Decode(2):")
+    if choose == 1:
+        x = encod(input("Enter string: "))
+        plain_text = x.word_checker(x.plain_text)
+        coded_word = f' plain text, {plain_text} has been encrypted to {encod.__cryp__(plain_text, 7, [string.ascii_lowercase, string.ascii_uppercase, string.punctuation])}'
+        print(coded_word) 
+    elif choose == 2:
+        y = decode(input("Enter string: "))
+        encoded_text = y.word_checker(y.plain_text)
+        print(f' encoded text, {encoded_text} has been decrypted to {decode.__decryp__(plain_text, 7, [string.ascii_lowercase, string.ascii_uppercase, string.punctuation])}')
+
     
 def parse_args():
     """Parse and validate command line arguments.
