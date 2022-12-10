@@ -27,7 +27,8 @@ class decode(encode):
     decode():
     '''This function overwrites and is based on the encode function, where this
     will take a presumably encoded string and reverse the encoding'''
-    
+    def decode(text, shift, alphabets):
+        return super().__cryp__(text, shift*-1, alphabets)
     
     
     
