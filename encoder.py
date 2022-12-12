@@ -4,10 +4,39 @@ import math
 class encode:
     __init__():
     ''' '''   
-    word_checker():
-    '''This funtion's purpose is to check if the user inputed word can be encoded
-    if it reads the string and it contains anything other than letter it will return
-    'word can not be encoded' '''
+    def word_checker(self, user_input):
+        '''Emily's function: conditional expressions. Checks user
+            input string to see if the string only contains letters and spaces
+            If it doesn't, it will loop back and ask for user input
+
+        Args:
+            user_input (string): The string that the user entered
+
+        Returns:
+            string: if the user's string meets the criteria,
+            it will return user_input
+
+        Side effects:
+            Prints a string: If the user's string does not meet the criteria,
+            it will print "Can't encode" '''
+    
+            invalid = False
+        
+            for s in user_input:
+                if (s.isalpha() == False and s!=" "):
+                    print("Can't encode")
+                    invalid = True
+        
+            while invalid == True:
+                user_input = input("Enter string: ")
+                invalid = False
+                for s in user_input:
+                    if (s.isalpha() == False and s!=" "):
+                        print("Can't encode")
+                        invalid = True
+            
+            return user_input
+    
     word_input():
     '''This funtion's purpose is what the user will use to input their words that they
     choose to encode'''   
