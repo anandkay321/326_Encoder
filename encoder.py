@@ -4,43 +4,6 @@ import argparse
 import sys
 
 ALPHABET = [string.ascii_lowercase, string.ascii_uppercase, string.punctuation]
-#Oscar
-    '''Oscar function(cryp):is file open, readlines ,close and if/else statement. This allows the program to open the file, 
-    read the contents, and then close the file. The program will then provide an option to either encode of decode.
-        Args:
-            data: obtains the input from user as well as read the data from file.
-            f: set to open the file given from input
-            f.close: closes the file when finished
-        Returns:
-            f.close: file has been opened and read and is now closed
-        Side effects:
-            It will allow the program to open and analyze the contents within the file
-            and either encode or decode the text within the file'''    
-def file_encoder(path, shift, e_or_d):
-    print(path)
-
-    data = []
-    f = open(path, 'r')
-    data = f.readlines()
-    print(data)
-    f.close()
-    if(e_or_d == "1"):
-        with open(path, mode= 'w') as f:
-            count = 1
-            for x in data:
-                e = encod(x)
-                f.write(e.cryp(e.plain_text, int(shift), ALPHABET))
-                count+=1
-            
-    else:
-        with open(path, mode= 'w') as f:
-            count = 1
-            for x in data:
-                e = decode(x)
-                f.write(e.cryp(e.plain_text, int(shift), ALPHABET))
-                count+=1
-
-                
             
 class encod:
     def __init__(self,plain_text):
