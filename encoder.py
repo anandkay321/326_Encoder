@@ -4,6 +4,32 @@ import argparse
 import sys
 
 ALPHABET = [string.ascii_lowercase, string.ascii_uppercase, string.punctuation]
+    
+def file_encoder(path, shift, e_or_d):
+    print(path)
+
+    data = []
+    f = open(path, 'r')
+    data = f.readlines()
+    print(data)
+    f.close()
+    if(e_or_d == "1"):
+        with open(path, mode= 'w') as f:
+            count = 1
+            for x in data:
+                e = encod(x)
+                f.write(e.cryp(e.plain_text, int(shift), ALPHABET))
+                count+=1
+            
+    else:
+        with open(path, mode= 'w') as f:
+            count = 1
+            for x in data:
+                e = decode(x)
+                f.write(e.cryp(e.plain_text, int(shift), ALPHABET))
+                count+=1
+
+                
             
 class encod:
     def __init__(self,plain_text):
@@ -69,7 +95,19 @@ def cryp(self,text, shift, alphabets):
     #Joe
 def __repr__(self):
         return(f"encod('{self.plain_text}')")
-     
+
+
+#Oscar
+    '''Oscar function:
+    super()
+        Args:
+            Repr: returns a string of how to recreate the object.
+            cryp: overrides the one from above and calls it using super to reverse the encryption 
+        Returns:
+            Uses super and reverse the encryption
+        Side effects:
+            It will allow the program to reverse the encryption within the file'''
+            
 class decode(encod):
     def cryp(self, text, shift, alphabets):
         return super().cryp(text, shift*-1, alphabets)
@@ -234,11 +272,18 @@ def parse_args(arglist):
     parser.add_argument("file", nargs= '?', help = "path to file containing \
                             words to be encrypted")
     return parser.parse_args(arglist)
+    
+    
+    #Oscar
+    '''Oscar function:
+    __main__()
+        Args:
+            Parses args: calls main with the right amount of args
+        Returns:
+            the main with right amount of args
+            
 if __name__ == "__main__":
-    '''
-    Joe 
-    Parses arguments, checks how many there are, and initializes main with the
-    requisite amount of args
+    
     '''
     args = parse_args(sys.argv[1:])
     if(len(sys.argv) > 1):
