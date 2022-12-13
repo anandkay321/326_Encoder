@@ -4,7 +4,18 @@ import argparse
 import sys
 
 ALPHABET = [string.ascii_lowercase, string.ascii_uppercase, string.punctuation]
-
+#Oscar
+    '''Oscar function(cryp):is file open, readlines ,close and if/else statement. This allows the program to open the file, 
+    read the contents, and then close the file. The program will then provide an option to either encode of decode.
+        Args:
+            data: obtains the input from user as well as read the data from file.
+            f: set to open the file given from input
+            f.close: closes the file when finished
+        Returns:
+            f.close: file has been opened and read and is now closed
+        Side effects:
+            It will allow the program to open and analyze the contents within the file
+            and either encode or decode the text within the file'''    
 def file_encoder(path, shift, e_or_d):
     print(path)
 
@@ -117,19 +128,6 @@ def file_encoder(path, shift, e_or_d):
         Opens and edits file specified in path argument
         Creates encod object
     '''
-    
-    #Oscar
-    '''Oscar function(cryp):is file open, readlines ,close and if/else statement. This allows the program to open the file, 
-    read the contents, and then close the file. The program will then provide an option to either encode of decode.
-        Args:
-            data: obtains the input from user as well as read the data from file.
-            f: set to open the file given from input
-            f.close: closes the file when finished
-        Returns:
-            f.close: file has been opened and read and is now closed
-        Side effects:
-            It will allow the program to open and analyze the contents within the file
-            and either encode or decode the text within the file'''       
     
     # Opens file and reads line into data list
     data = []
