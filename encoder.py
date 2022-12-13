@@ -266,6 +266,11 @@ def parse_args(arglist):
     Returns:
         namespace: the parsed argument
     """
+    parser = argparse.ArgumentParser()
+    parser.add_argument("shift", nargs='?', help ="the number of characters to be shifted")
+    parser.add_argument("file", nargs= '?', help = "path to file containing \
+                            words to be encrypted")
+    return parser.parse_args(arglist)
 if __name__ == "__main__":
     '''
     Joe 
